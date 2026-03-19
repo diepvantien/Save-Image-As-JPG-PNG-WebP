@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="800" height="600">
+  <!-- Background -->
+  <rect width="400" height="300" rx="10" fill="#F8F4E6" />
+  
+  <!-- Header -->
+  <path d="M0 10 C0 4.477 4.477 0 10 0 L390 0 C395.523 0 400 4.477 400 10 L400 50 L0 50 Z" fill="#E8DCC4" />
+  <text x="200" y="32" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E1B18" text-anchor="middle">Save Image As...</text>
+
+  <!-- Options container -->
+  <rect x="20" y="70" width="360" height="160" rx="8" fill="#FDFBFA" stroke="#DACCB2" stroke-width="2" />
+  
+  <!-- Formats -->
+  <text x="40" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1E1B18">Default Format</text>
+  
+  <rect x="40" y="115" width="80" height="30" rx="15" fill="#CD8B68" />
+  <text x="80" y="135" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">JPG</text>
+
+  <rect x="130" y="115" width="80" height="30" rx="15" fill="#EAE5D9" />
+  <text x="170" y="135" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E1B18" text-anchor="middle">PNG</text>
+
+  <rect x="220" y="115" width="80" height="30" rx="15" fill="#EAE5D9" />
+  <text x="260" y="135" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E1B18" text-anchor="middle">WebP</text>
+
+  <!-- Quality -->
+  <text x="40" y="175" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1E1B18">JPG/WebP Quality (90%)</text>
+  <rect x="40" y="195" width="300" height="6" rx="3" fill="#EAE5D9" />
+  <rect x="40" y="195" width="270" height="6" rx="3" fill="#CD8B68" />
+  <circle cx="310" cy="198" r="8" fill="#CD8B68" />
+  
+  <!-- Footer links -->
+  <line x1="20" y1="250" x2="380" y2="250" stroke="#DACCB2" stroke-width="1" />
+  <text x="60" y="275" font-family="Arial, sans-serif" font-size="12" fill="#887A65">Feedback</text>
+  <circle cx="125" cy="271" r="3" fill="#DACCB2" />
+  <text x="150" y="275" font-family="Arial, sans-serif" font-size="12" fill="#887A65">GitHub</text>
+  <circle cx="215" cy="271" r="3" fill="#DACCB2" />
+  <text x="240" y="275" font-family="Arial, sans-serif" font-size="12" fill="#887A65">Kofi Donate</text>
+</svg>

@@ -23,9 +23,9 @@
 ## 📸 Screenshots & Demo
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/diepvantien/Save-Image-As-JPG-PNG-WebP/main/assets/demo-popup.png" width="280" alt="Vintage Popup UI Settings" />
+  <img src="https://raw.githubusercontent.com/diepvantien/Save-Image-As-JPG-PNG-WebP/main/assets/demo-popup.svg" width="280" alt="Vintage Popup UI Settings" />
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/diepvantien/Save-Image-As-JPG-PNG-WebP/main/assets/demo-crop.png" width="500" alt="Image Crop Workspace" />
+  <img src="https://raw.githubusercontent.com/diepvantien/Save-Image-As-JPG-PNG-WebP/main/assets/demo-crop.svg" width="500" alt="Image Crop Workspace" />
 </p>
 <p align="center">
   <i>(Left: The Vintage Settings Popup | Right: The interactive Image Crop Workspace)</i>
