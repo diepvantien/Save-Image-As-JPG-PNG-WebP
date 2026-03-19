@@ -22,14 +22,11 @@
 
 ## 📸 Screenshots & Demo
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/diepvantien/Save-Image-As-JPG-PNG-WebP/main/assets/demo-popup.svg" width="280" alt="Vintage Popup UI Settings" />
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/diepvantien/Save-Image-As-JPG-PNG-WebP/main/assets/demo-crop.svg" width="500" alt="Image Crop Workspace" />
-</p>
-<p align="center">
-  <i>(Left: The Vintage Settings Popup | Right: The interactive Image Crop Workspace)</i>
-</p>
+Bạn có thể xem trực tiếp giao diện bằng cách mở các tệp HTML của tiện ích:
+- **[popup.html](popup.html)**: Giao diện cài đặt (Popup)
+- **[crop.html](crop.html)**: Giao diện cắt ảnh (Crop Workspace)
+
+
 
 ---
 
@@ -56,11 +53,11 @@
 
 Currently available for Developer Mode installation (Chrome Web Store link coming soon!):
 
-1. **Download** this repository as a `.zip` file using the blue download button above.
-2. **Extract** the downloaded `.zip` file to a folder on your computer.
+1. **Download** only the core extension files (`manifest.json`, `.html` files, `.js` scripts, and the `icons/` folder). You do not need to download the `assets/` folder or `README.md`. Alternatively, download the pre-packaged `.zip` from the **Releases** page.
+2. **Place** these core files into a single folder on your computer (if downloaded as `.zip`, extract it first).
 3. Open your Chromium browser (Chrome, Edge, Brave) and navigate to `chrome://extensions/`.
 4. Turn on **Developer mode** using the toggle switch in the upper right.
-5. Click **"Load unpacked"** and select the folder you just extracted.
+5. Click **"Load unpacked"** and select the folder containing the core files.
 6. Done! Try it immediately by right-clicking an image.
 
 ---
@@ -87,3 +84,15 @@ If this extension saves your life and improves your workflow every day, please c
 <p align="center">
   <i>100% Client-Side. No servers, no tracking, completely private.</i>
 </p>
+
+---
+
+## 🌟 Star History
+
+<a href="https://star-history.com/#diepvantien/Save-Image-As-JPG-PNG-WebP&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=diepvantien/Save-Image-As-JPG-PNG-WebP&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=diepvantien/Save-Image-As-JPG-PNG-WebP&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=diepvantien/Save-Image-As-JPG-PNG-WebP&type=Date" />
+  </picture>
+</a>
