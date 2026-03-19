@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crop Image</title>
+  <style>
+    body { margin: 0; background: #EAE6D7; color: #1E1B18; font-family: -apple-system, sans-serif; display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+    .toolbar { padding: 14px 20px; background: #F8F4E6; display: flex; gap: 12px; align-items: center; box-shadow: 0 2px 10px rgba(166, 101, 66, 0.15); z-index: 10; border-bottom: 2px dashed #E0D3C1; }
+    .toolbar-title { font-weight: 700; font-size: 16px; margin-right: auto; display: flex; align-items: center; gap: 8px; color: #A66542; }
+    .toolbar select, .toolbar button { padding: 8px 16px; font-size: 14px; border-radius: 6px; border: 1px solid #E0D3C1; background: #FFFDF9; color: #1E1B18; cursor: pointer; outline: none; transition: 0.2s; font-weight: 500; }
+    .toolbar select:hover, .toolbar button:hover { background: #E0D3C1; }
+    .toolbar button.save { background: #A66542; color: #FFF; border: none; font-weight: 600; box-shadow: 0 2px 6px rgba(166, 101, 66, 0.3); }
+    .toolbar button.save:hover { background: #8e5535; transform: translateY(1px); box-shadow: none; }
+    
+    .workspace { flex: 1; position: relative; display: flex; justify-content: center; align-items: center; overflow: hidden; user-select: none; background: #EAE6D7; }
+    img { max-width: 90%; max-height: 90%; object-fit: contain; display: block; box-shadow: 0 4px 20px rgba(0,0,0,0.15); pointer-events: none; }
+    .crop-box { position: absolute; border: 2px dashed #FFF; box-shadow: 0 0 0 9999px rgba(0,0,0,0.6); display: none; cursor: move; }
+    .handle { position: absolute; width: 12px; height: 12px; background: #A66542; border: 2px solid #FFF; border-radius: 50%; z-index: 2; }
+    .nw { top: -7px; left: -7px; cursor: nwse-resize; }
+    .ne { top: -7px; right: -7px; cursor: nesw-resize; }
+    .sw { bottom: -7px; left: -7px; cursor: nesw-resize; }
+    .se { bottom: -7px; right: -7px; cursor: nwse-resize; }
+    .hint { position: absolute; bottom: 20px; text-align: center; color: rgba(30, 27, 24, 0.6); font-size: 14px; font-weight: 500; pointer-events: none; z-index: 5; }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <span class="toolbar-title">✂️ Crop Image</span>
+    <select id="sel-ratio">
+      <option value="free">Free Ratio</option>
+      <option value="1:1">1:1 Square</option>
+      <option value="16:9">16:9 Landscape</option>
+      <option value="9:16">9:16 Portrait</option>
+      <option value="4:3">4:3 Standard</option>
+      <option value="3:4">3:4 Vertical</option>
+    </select>
+    <button id="btn-reset">Reset Area</button>
+    <select id="sel-format">
+      <option value="image/png">Save as PNG</option>
+      <option value="image/jpeg">Save as JPG</option>
+      <option value="image/webp">Save as WebP</option>
+    </select>
+    <button id="btn-save" class="save">Download Selection</button>
+  </div>
+  <div class="workspace" id="workspace">
+    <img id="image" src="" alt="Loading..." />
+    <div class="crop-box" id="crop-box">
+      <div class="handle nw"></div>
+      <div class="handle ne"></div>
+      <div class="handle sw"></div>
+      <div class="handle se"></div>
+    </div>
+    <div class="hint">Click and drag to draw. Use corners to resize. Drag box to move. 'ESC' to clear.</div>
+  </div>
+  <script src="crop.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Settings</title>
+  <style>
+    :root { 
+      --bg: #F8F4E6; 
+      --list-bg: #FFFDF9; 
+      --text: #1E1B18; 
+      --border: #E0D3C1; 
+      --accent: #A66542; 
+      --success: #677A5B; 
+      --muted: #8A8175; 
+      --shadow: rgba(166, 101, 66, 0.15);
+    }
+    @media(prefers-color-scheme:dark){ 
+      :root { 
+        --bg: #262422; 
+        --list-bg: #33302D; 
+        --text: #F0EBE1; 
+        --border: #4A4540; 
+        --accent: #CD8B68; 
+        --success: #8E9F82; 
+        --muted: #A39B90; 
+        --shadow: rgba(0, 0, 0, 0.4);
+      } 
+    }
+    body { width: 280px; margin:0; padding: 16px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background:var(--bg); color:var(--text); user-select:none; }
+    h1 { font-size: 20px; font-weight: 700; margin: 0 0 16px 0; letter-spacing: -0.01em; line-height: 1.2; color: var(--text); border-bottom: 2px dashed var(--border); padding-bottom: 12px; text-align: center; }
+    
+    .section-title { font-size: 11px; font-weight: 600; color: var(--muted); margin: 0 0 6px 6px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .list { background: var(--list-bg); border-radius: 8px; margin-bottom: 16px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 2px 6px var(--shadow); }
+    
+    .item-slider { padding: 12px 14px; border-bottom: 1px solid var(--border); }
+    .item-slider:last-child { border-bottom: none; }
+    .item-slider .header { display: flex; justify-content: space-between; margin-bottom: 8px; }
+    .item-slider .label { font-size: 14px; font-weight: 500; }
+    .item-slider .val { font-size: 14px; font-weight: 600; color: var(--accent); font-variant-numeric: tabular-nums; }
+    input[type=range] { width: 100%; -webkit-appearance: none; height: 5px; background: var(--border); border-radius: 3px; outline: none; }
+    input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; background: var(--list-bg); border-radius: 50%; border: 2px solid var(--accent); box-shadow: 0 1px 3px rgba(0,0,0,0.15); cursor: pointer; transition: transform 0.1s; }
+    input[type=range]::-webkit-slider-thumb:active { transform: scale(1.15); background: var(--accent); }
+    
+    .item-toggle { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border-bottom: 1px solid var(--border); }
+    .item-toggle:last-child { border-bottom: none; }
+    .item-toggle .label { font-size: 14px; font-weight: 500; }
+    
+    .switch { position: relative; width: 40px; height: 24px; display: inline-block; cursor: pointer; }
+    .switch input { opacity: 0; width: 0; height: 0; position: absolute; }
+    .switch .track { position: absolute; inset: 0; background: var(--border); border-radius: 30px; transition: 0.2s; }
+    .switch input:checked + .track { background: var(--success); }
+    .switch .thumb { position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; background: var(--list-bg); border-radius: 50%; transition: 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+    .switch input:checked ~ .thumb { transform: translateX(16px); }
+    
+    .btn-save { width: 100%; padding: 12px; background: var(--accent); color: #fff; font-size: 15px; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; transition: 0.2s; text-align: center; display: block; margin-top: 10px; box-shadow: 0 2px 6px var(--shadow); }
+    .btn-save:active { opacity: 0.85; transform: translateY(1px); }
+    
+    .footer-links { display: flex; justify-content: center; align-items: center; gap: 18px; margin-top: 16px; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 12px; font-weight: 500; display: flex; align-items: center; gap: 4px; transition: color 0.15s; }
+    .footer-links a:hover { color: var(--accent); }
+    
+    .toast { position: fixed; top: -40px; left: 50%; transform: translateX(-50%); font-weight: 500; background: var(--text); color: var(--list-bg); padding: 10px 20px; border-radius: 30px; font-size: 14px; opacity: 0; transition: 0.4s cubic-bezier(0.175,0.885,0.32,1.275); pointer-events: none; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    .toast.show { opacity: 1; top: 16px; }
+  </style>
+</head>
+<body>
+  <div class="toast" id="toast">Saved Successfully</div>
+  <h1>Save Image As...</h1>
+
+  <div class="section-title">General</div>
+  <div class="list" id="general-list"></div>
+
+  <div class="section-title">Size & Quality</div>
+  <div class="list" id="slider-list"></div>
+
+  <button class="btn-save" id="btn-save">Done</button>
+
+  <div class="footer-links">
+    <a href="#" id="link-feedback" title="Feedback">✉️ Feedback</a>
+    <a href="#" id="link-github" title="Author Info">🧑‍💻 GitHub</a>
+    <a href="#" id="link-donate" title="Donate">☕ Donate</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
