@@ -1,130 +1,76 @@
-# 🖼 Save Image As JPG/PNG/WebP
+<h1 align="center">Save Image As JPG/PNG/WebP 🖼️</h1>
 
-**Version:** 1.2.0  
-**Manifest Version:** MV3 (Chrome / Edge / Brave)
+<p align="center">
+  <strong>The ultimate Right-Click Extension to seamlessly save any image as JPG, PNG, or WebP. Comes with a powerful built-in Image Cropping tool.</strong>
+</p>
 
----
+<p align="center">
+  <img src="https://img.shields.io/badge/Manifest_V3-Supported-success?style=for-the-badge&logo=googlechrome" alt="Manifest V3" />
+  <img src="https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge" alt="Version 1.0.0" />
+</p>
 
-## ✨ Features
+<p align="center">
+  <a href="https://github.com/diepvantien/Save-Image-As-JPG-PNG-WebP/archive/refs/heads/main.zip">
+    <img src="https://img.shields.io/badge/📥_Download_Source-Code-blue?style=for-the-badge" alt="Download as ZIP" />
+  </a>
+  <a href="#-installation--usage">
+    <img src="https://img.shields.io/badge/Chrome_Web_Store-Coming_Soon-orange?style=for-the-badge&logo=googlechrome" alt="Chrome Web Store" />
+  </a>
+</p>
 
-- **Right-click any image** → Save as JPG, PNG, WebP, GIF, BMP or Original
-- **Quality control** – Adjust JPG & WebP quality from the popup
-- **Social platforms** – Smart URL extraction for:
-  - Twitter / X (gets original quality)
-  - Facebook / Instagram (strips size constraints)
-  - Pinterest (gets full-resolution original)
-  - Reddit (bypasses preview CDN)
-  - TikTok, YouTube, and more
-- **Canvas capture** – Save images from `<canvas>` elements and video frames
-- **Background images** – Right-click on elements with CSS background images
-- **Fallback chain** – OffscreenCanvas → content-script canvas → original download
+<hr>
 
----
+## ✨ Key Features
 
-## 📦 Installation (Developer Mode)
-
-1. Open Chrome and go to `chrome://extensions/`
-2. Enable **Developer mode** (top-right toggle)
-3. Click **"Load unpacked"**
-4. Select the `save-image-ext` folder
-5. The extension icon appears in the toolbar ✓
+- **🚀 One-Click Conversion:** Right-click on any image (even from locked sites like Twitter, Instagram, or Facebook) and securely save it directly as JPG, PNG, or WebP. No more frustrating `.jfif` or `.webp` lock-ins!
+- **✂️ Built-In Crop & Save:** Don't want the full image? Choose the **"✂️ Crop & Save Image..."** option. A beautiful editor tab will open, allowing you to drag and select exactly what you want.
+- **📐 Fixed Aspect Ratios:** The crop tool supports Free Ratio, `1:1 Square`, `16:9 Landscape`, `9:16 Portrait`, `4:3 Standard`, and `3:4 Vertical` — adapting proportionally as you resize corners.
+- **🎨 Vintage Aesthetics UI:** Access the extension's Settings Popup featuring a gorgeous, warm Vintage design. Effortlessly change Image Scale/Quality parameters using custom sliders. 
+- **🛡️ Universal Extract Engine:** Powered by Manifest V3 and OffscreenCanvas. Smartly ignores CORS locks, extracts hidden CSS background images, captures HTML5 Video frames, and parses `<picture> srcset`.
 
 ---
 
 ## 🚀 How to Use
 
-### Right-click menu
-Right-click any image on any webpage:
-
-```
-🖼 Save Image As...
-  ├── Save as JPG       ← Quick picks
-  ├── Save as PNG
-  ├── Save as WebP
-  ├── ──────────────
-  ├── Save as GIF
-  ├── Save as BMP
-  ├── ──────────────
-  └── ⬇ Save Original  ← No conversion
-```
-
-Plus 3 quick top-level shortcuts:
-```
-  Save as JPG   (quick)
-  Save as PNG   (quick)
-  Save as WebP  (quick)
-```
-
-### Popup settings
-Click the toolbar icon to:
-- Adjust JPG quality (10–100%)
-- Adjust WebP quality (10–100%)
-- Toggle "Save As" dialog
+1. **Right-click** on any image.
+2. Select **"Save Image As..."** from the context menu.
+3. Choose to save instantly as **JPG, PNG,** or **WebP**.
+4. **Or Select "✂️ Crop & Save Image..."** to enter the workspace, draw a rectangle over the image, adjust sizes using handles, and hit **Download Selection**. *(Press `ESC` to cancel the crop box at any time).*
 
 ---
 
-## 🌐 Platform Support
+## 💻 Installation
 
-| Platform   | URL Transform | Notes |
-|------------|--------------|-------|
-| Twitter/X  | ✅ `?format=png&name=orig` | Gets highest resolution |
-| Facebook   | ✅ CDN cleanup | Original quality |
-| Instagram  | ✅ Remove size params | Full resolution |
-| Pinterest  | ✅ `/originals/` path | Full resolution |
-| Reddit     | ✅ `preview.redd.it → i.redd.it` | |
-| TikTok     | ✅ Direct CDN | Works as-is |
-| YouTube    | ✅ Canvas capture | For thumbnails |
-| All others | ✅ Standard fetch | |
+Currently available for Developer Mode installation (Chrome Web Store link coming soon!):
+
+1. **Download** this repository as a `.zip` file using the blue download button above.
+2. **Extract** the downloaded `.zip` file to a folder on your computer.
+3. Open your Chromium browser (Chrome, Edge, Brave) and navigate to `chrome://extensions/`.
+4. Turn on **Developer mode** using the toggle switch in the upper right.
+5. Click **"Load unpacked"** and select the folder you just extracted.
+6. Done! Try it immediately by right-clicking an image.
 
 ---
 
-## 🔑 Permissions
+## 🙋‍♂️ Author & Support
 
-| Permission | Why |
-|-----------|-----|
-| `contextMenus` | Right-click menu |
-| `downloads` | Save files |
-| `activeTab` | Read current tab |
-| `scripting` | Inject content script |
-| `storage` | Save quality settings |
-| `offscreen` | Image conversion |
-| `<all_urls>` | Fetch images from any domain |
+<h3 align="center">Developed with ❤️ by Diep Van Tien</h3>
 
----
+<p align="center">
+  <a href="https://github.com/diepvantien"><img src="https://img.shields.io/badge/Author-Diep_Van_Tien-24292e?style=for-the-badge&logo=github" alt="Author GitHub" /></a>
+  <a href="mailto:dieptien290620@gmail.com"><img src="https://img.shields.io/badge/Feedback-dieptien290620@gmail.com-ea4335?style=for-the-badge&logo=gmail" alt="Email" /></a>
+</p>
 
-## 🛠 Technical Details
+If this extension saves your life and improves your workflow every day, please consider supporting me! This helps me maintain the project and add more incredible features. ☕
 
-**Conversion Pipeline:**
-1. Content script extracts best image URL (handles srcset, social platforms)
-2. Background service worker fetches image using `host_permissions`
-3. `OffscreenCanvas` converts to target format
-4. Falls back to content-script canvas if CORS blocks SW fetch
-5. Last resort: downloads original file
-
-**File Structure:**
-```
-save-image-ext/
-├── manifest.json     MV3 manifest
-├── background.js     Service worker (conversion + download)
-├── content.js        DOM image extraction + platform URLs
-├── popup.html        Settings UI
-├── popup.js          Settings logic
-├── README.md         This file
-└── icons/
-    ├── icon16.png
-    ├── icon32.png
-    ├── icon48.png
-    └── icon128.png
-```
+<p align="center">
+  <a href="https://buymeacoffee.com/tixuno" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 50px !important;width: 217px !important;" >
+  </a>
+</p>
 
 ---
 
-## 📝 Notes
-
-- **GIF animation**: Converting GIF to other formats saves the first frame only. Use "Save Original" to keep animation.
-- **SVG images**: Saved as PNG by default (canvas rendering).
-- **Protected CDN URLs**: Some images (e.g., DRM-protected) cannot be converted; original is downloaded instead.
-
----
-
-Made with ❤️  — MIT License
+<p align="center">
+  <i>100% Client-Side. No servers, no tracking, completely private.</i>
+</p>
