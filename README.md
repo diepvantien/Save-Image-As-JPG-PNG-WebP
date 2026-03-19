@@ -20,14 +20,6 @@
 
 <hr>
 
-## 📸 Screenshots & Demo
-
-Bạn có thể xem trực tiếp giao diện bằng cách mở các tệp HTML của tiện ích:
-- **[popup.html](popup.html)**: Giao diện cài đặt (Popup)
-- **[crop.html](crop.html)**: Giao diện cắt ảnh (Crop Workspace)
-
-
-
 ---
 
 ## ✨ Key Features
