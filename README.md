@@ -20,6 +20,19 @@
 
 <hr>
 
+## 📸 Screenshots & Demo
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/diepvantien/Save-Image-As-JPG-PNG-WebP/main/assets/demo-popup.png" width="280" alt="Vintage Popup UI Settings" />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/diepvantien/Save-Image-As-JPG-PNG-WebP/main/assets/demo-crop.png" width="500" alt="Image Crop Workspace" />
+</p>
+<p align="center">
+  <i>(Left: The Vintage Settings Popup | Right: The interactive Image Crop Workspace)</i>
+</p>
+
+---
+
 ## ✨ Key Features
 
 - **🚀 One-Click Conversion:** Right-click on any image (even from locked sites like Twitter, Instagram, or Facebook) and securely save it directly as JPG, PNG, or WebP. No more frustrating `.jfif` or `.webp` lock-ins!
