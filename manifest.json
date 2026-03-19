@@ -9,8 +9,7 @@
     "activeTab",
     "scripting",
     "storage",
-    "unlimitedStorage",
-    "offscreen"
+    "unlimitedStorage"
   ],
   "host_permissions": ["<all_urls>"],
   "background": {
@@ -40,11 +39,5 @@
     "32":  "icons/icon32.png",
     "48":  "icons/icon48.png",
     "128": "icons/icon128.png"
-  },
-  "web_accessible_resources": [
-    {
-      "resources": ["offscreen.html"],
-      "matches": ["<all_urls>"]
-    }
-  ]
+  }
 }
